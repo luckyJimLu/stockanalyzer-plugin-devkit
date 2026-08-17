@@ -1,0 +1,10 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+*.stockplugin
+plugins/*
+!plugins/.gitkeep
+.env
+.env.*
+!.env.example

@@ -1,0 +1,11 @@
+{
+  "name": "@stockanalyzer/plugin-core",
+  "version": "0.1.0",
+  "description": "StockAnalyzer 插件 manifest、兼容性与完整性校验",
+  "type": "module",
+  "files": ["dist"],
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js", "default": "./dist/index.js" } },
+  "scripts": { "build": "tsc -p tsconfig.json" },
+  "dependencies": { "@stockanalyzer/plugin-contracts": "0.1.0" },
+  "publishConfig": { "access": "public" }
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "dev.example.sma",
+  "version": "1.0.0",
+  "apiVersion": "^1.0.0",
+  "engine": { "minimum": "0.1.0" },
+  "name": { "zh-CN": "SMA 示例" },
+  "description": { "zh-CN": "简单移动平均示例" },
+  "author": { "name": "StockAnalyzer contributors" },
+  "license": "MIT",
+  "icon": "chart-line",
+  "entry": "dist/plugin.iife.js",
+  "contributes": { "studies": [{ "id": "sma", "kind": "indicator", "export": "main" }] },
+  "permissions": {
+    "marketData": { "symbols": "chart", "timeframes": "chart" },
+    "fundamentals": false,
+    "corporateActions": false
+  },
+  "integrity": { "algorithm": "sha256", "manifest": "checksums.json" }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "stockanalyzer-plugin-devkit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "StockAnalyzer 指标插件开发工具包",
+  "type": "module",
+  "packageManager": "npm@10.9.2",
+  "engines": { "node": ">=20.0.0" },
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "tsc -b",
+    "type-check": "tsc -b --pretty false",
+    "test": "vitest run",
+    "check": "npm run type-check && npm test",
+    "plugin": "node packages/cli/dist/cli.js",
+    "plugin:create": "node packages/cli/dist/cli.js create",
+    "plugin:build": "node packages/cli/dist/cli.js build",
+    "plugin:test": "node packages/cli/dist/cli.js test",
+    "plugin:probe": "node packages/cli/dist/cli.js probe",
+    "plugin:release": "node packages/cli/dist/cli.js release",
+    "plugin:validate": "node packages/cli/dist/cli.js validate",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "~5.6.3",
+    "vitest": "^4.1.10"
+  }
+}

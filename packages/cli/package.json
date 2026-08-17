@@ -1,0 +1,24 @@
+{
+  "name": "@stockanalyzer/plugin-cli",
+  "version": "0.1.0",
+  "description": "StockAnalyzer 插件创建、构建、探测、打包和校验 CLI",
+  "type": "module",
+  "files": [
+    "dist/cli.js", "dist/cli.d.ts",
+    "dist/index.js", "dist/index.d.ts",
+    "dist/tooling.js", "dist/tooling.d.ts"
+  ],
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js", "default": "./dist/index.js" } },
+  "bin": { "stockanalyzer-plugin": "dist/cli.js" },
+  "scripts": { "build": "tsc -p tsconfig.json" },
+  "dependencies": {
+    "@jitl/quickjs-wasmfile-release-sync": "0.32.0",
+    "@stockanalyzer/plugin-contracts": "0.1.0",
+    "@stockanalyzer/plugin-core": "0.1.0",
+    "@stockanalyzer/plugin-sdk": "0.1.0",
+    "esbuild": "0.28.1",
+    "fflate": "0.8.3",
+    "quickjs-emscripten-core": "0.32.0"
+  },
+  "publishConfig": { "access": "public" }
+}

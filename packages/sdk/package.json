@@ -1,0 +1,11 @@
+{
+  "name": "@stockanalyzer/plugin-sdk",
+  "version": "0.1.0",
+  "description": "StockAnalyzer 指标插件 SDK",
+  "type": "module",
+  "files": ["dist"],
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js", "default": "./dist/index.js" } },
+  "scripts": { "build": "tsc -p tsconfig.json" },
+  "dependencies": { "@stockanalyzer/plugin-contracts": "0.1.0" },
+  "publishConfig": { "access": "public" }
+}
